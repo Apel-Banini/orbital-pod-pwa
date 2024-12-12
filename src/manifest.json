@@ -1,0 +1,48 @@
+{
+  "name": "Orbital Pod",
+  "short_name": "Orbital",
+  "description": "A cutting-edge PWA for immersive XR experiences.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+	{
+	  "src": "assets/icon-192.png",
+	  "sizes": "192x192",
+	  "type": "image/png"
+	},
+	{
+	  "src": "assets/icon-512.png",
+	  "sizes": "512x512",
+	  "type": "image/png"
+	},
+	{
+	  "src": "assets/icon-1024.png",
+	  "sizes": "1024x1024",
+	  "type": "image/png"
+	}
+  ],
+  "splash_pages": [
+	{
+	  "src": "assets/splash-screen-192x192.png",
+	  "sizes": "192x192",
+	  "type": "image/png"
+	},
+	{
+	  "src": "assets/splash-screen-512x512.png",
+	  "sizes": "512x512",
+	  "type": "image/png"
+	}
+  ],
+  "scope": "/",
+  "orientation": "portrait",
+  "lang": "en-US",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "ios": {
+	"status_bar_style": "black-translucent",
+	"apple_mobile_web_app_title": "Orbital Pod",
+	"apple_mobile_web_app_capable": true
+  }
+}
