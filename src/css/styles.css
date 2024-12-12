@@ -7,26 +7,26 @@ body {
 	height: 100vh;
 }
 
+/* Add styles for the books grid */
 #library {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
 	padding: 10px;
-	background-color: #f4f4f4;
 }
 
+/* Adding card style and hover effect */
 .book {
-	background-color: #ddd;
-	padding: 15px;
+	background: linear-gradient(145deg, #ffffff, #d6d6d6);
+	border-radius: 12px;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 	cursor: pointer;
-	border-radius: 5px;
-	text-align: center;
-	transition: transform 0.2s;
+	transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .book:hover {
 	transform: scale(1.05);
-	background-color: #ccc;
+	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
 }
 
 #open-book {
@@ -39,15 +39,40 @@ body {
 	padding: 20px;
 }
 
+/* Style the book content area */
 #book-content {
-	flex: 1;
-	width: 100%;
-	background-color: #eee;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	padding: 20px;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+#book-content img, #book-content video {
+	max-width: 100%;
+	border-radius: 10px;
 }
 
 #page-slider {
 	margin-top: 20px;
+}
+
+/* Toast notification styles */
+.toast {
+	position: fixed;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #f44336;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.toast.show {
+	visibility: visible;
+	opacity: 1;
 }

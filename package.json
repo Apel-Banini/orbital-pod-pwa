@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "live-server src",
+    "build": "webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
@@ -11,6 +12,7 @@
   "description": "",
   "dependencies": {
     "express": "^4.21.2",
+    "idb": "^8.0.0",
     "serve-static": "^1.16.2"
   },
   "devDependencies": {
@@ -18,9 +20,5 @@
     "@babel/preset-env": "^7.26.0",
     "babel-loader": "^9.2.1"
   },
-  "type": "module",
-  "scripts": {
-    "start": "live-server src",
-    "build": "webpack --config webpack.config.js"
-  }
+  "type": "module"
 }
