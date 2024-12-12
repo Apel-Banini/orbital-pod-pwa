@@ -1,0 +1,53 @@
+/* css/styles.css */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+}
+
+#library {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 10px;
+	background-color: #f4f4f4;
+}
+
+.book {
+	background-color: #ddd;
+	padding: 15px;
+	cursor: pointer;
+	border-radius: 5px;
+	text-align: center;
+	transition: transform 0.2s;
+}
+
+.book:hover {
+	transform: scale(1.05);
+	background-color: #ccc;
+}
+
+#open-book {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	padding: 20px;
+}
+
+#book-content {
+	flex: 1;
+	width: 100%;
+	background-color: #eee;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#page-slider {
+	margin-top: 20px;
+}
