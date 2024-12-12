@@ -1,5 +1,5 @@
 // Import the IndexedDB utility
-import { openDatabase } from './indexeddb.js';
+import { openDatabase } from './js/indexeddb.js';
 
 // Global variable to hold the current book ID
 let currentBookId = null;

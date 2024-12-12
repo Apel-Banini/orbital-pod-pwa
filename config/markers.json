@@ -1,0 +1,19 @@
+{
+  "markers": [
+	{
+	  "id": "marker1",
+	  "media": "books/marker1.jpg",
+	  "type": "image"
+	},
+	{
+	  "id": "marker2",
+	  "media": "books/marker2.mp4",
+	  "type": "video"
+	},
+	{
+	  "id": "marker3",
+	  "media": "books/marker3.mp3",
+	  "type": "audio"
+	}
+  ]
+}
