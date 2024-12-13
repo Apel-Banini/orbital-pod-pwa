@@ -3,21 +3,180 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Orbital Pod PWA</title>
+		<title>Orbital Pod PWA - AR Bookshelf</title>
 		<link rel="manifest" href="manifest.json" />
 		<link rel="stylesheet" href="/assets/styles/main.css" />
+		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/aframe-ar.js@1.8.0/dist/aframe-ar.js"></script>
 		<script type="module" src="app.js"></script>
 	</head>
-	<body>
-		<!-- Add a spinner for loading state -->
-		<div id="loading-spinner" style="display:none;">Loading...</div>
-		<div id="library"></div>
-		<div id="page-number">Page: 1</div>
-		<input type="range" id="page-slider" min="1" max="100" />
-		<div id="book-content"></div>
-		<div id="error-display"></div>
-		<!-- For error messages -->
+	<body style="margin: 0; overflow: hidden;">
+		<a-scene embedded arjs="trackingMethod: best;">
+			<!-- Skybox -->
+			<a-sky src="url(/assets/images/skybox.jpg)" rotation="0 -130 0"></a-sky>
+			<!-- Camera setup -->
+			<a-camera></a-camera>
 
+			<!-- Define the AR marker -->
+			<a-marker preset="hiro" id="marker1">
+				<!-- Here, we will display an entity (book) when the marker is detected -->
+				<a-entity id="book" geometry="primitive: box; width: 1; height: 1; depth: 0.1;" material="color: #FF5733;" position="0 0.5 0">
+					<!-- This can be an image or a model of the book -->
+					<a-text value="Book 1" align="center" position="0 0 0.6" color="#FFFFFF"></a-text>
+				</a-entity>
+			</a-marker>
+
+			<a-box
+				position="0 -3 -2.5"
+				width="15"
+				height="0.1"
+				depth="6.5"
+				material="color: #bfbfbf
+;
+			 opacity: 0.5; transparent: true;"
+			></a-box>
+
+			<!-- Define a 3D Cabinet to display books -->
+			<a-box
+				position="-6 2 -5"
+				rotation="0 30 0"
+				width="4"
+				height="6"
+				depth="0.1"
+				material="color: #bfbfbf
+;
+			 opacity: 0.5; transparent: true;"
+			>
+				<a-box
+					position="0 -3 0.25"
+					width="4"
+					height="0.1"
+					depth="0.5"
+					material="color: #bfbfbf
+;
+			 opacity: 0.5; transparent: true;"
+				></a-box>
+				<a-box
+					position="0 -2 0.25"
+					width="4"
+					height="0.1"
+					depth="0.5"
+					material="color: #bfbfbf
+;
+			 opacity: 0.5; transparent: true;"
+				></a-box>
+				<a-box
+					position="0 -1 0.25"
+					width="4"
+					height="0.1"
+					depth="0.5"
+					material="color: #bfbfbf
+;
+			 opacity: 0.5; transparent: true;"
+				></a-box>
+				<a-box
+					position="0 0 0.25"
+					width="4"
+					height="0.1"
+					depth="0.5"
+					material="color: #bfbfbf
+;
+			 opacity: 0.5; transparent: true;"
+				></a-box>
+				<a-box
+					position="0 1 0.25"
+					width="4"
+					height="0.1"
+					depth="0.5"
+					material="color: #bfbfbf
+;
+			 opacity: 0.5; transparent: true;"
+				></a-box>
+				<a-box
+					position="0 2 0.25"
+					width="4"
+					height="0.1"
+					depth="0.5"
+					material="color: #bfbfbf
+;
+			 opacity: 0.5; transparent: true;"
+				></a-box>
+				<a-box
+					position="0 3 0.25"
+					width="4"
+					height="0.1"
+					depth="0.5"
+					material="color: #bfbfbf
+;
+			 opacity: 0.5; transparent: true;"
+				></a-box>
+			</a-box>
+
+			<!-- Define a 3D Cabinet to display books -->
+			<a-box
+				position="0 1 -6.5"
+				rotation="-15 0 0"
+				width="7"
+				height="4"
+				depth="0.1"
+				material="color: #bfbfbf
+;
+ opacity: 0.5; transparent: true;"
+			>
+				<a-box
+					position="0 -2 0.25"
+					rotation="15 0 0"
+					width="7"
+					height="0.1"
+					depth="0.5"
+					material="color: #bfbfbf
+;
+ opacity: 0.5; transparent: true;"
+				></a-box>
+				<a-box
+					position="0 -1 0.25"
+					rotation="15 0 0"
+					width="7"
+					height="0.1"
+					depth="0.5"
+					material="color: #bfbfbf
+;
+ opacity: 0.5; transparent: true;"
+				></a-box>
+				<a-box
+					position="0 0 0.25"
+					rotation="15 0 0"
+					width="7"
+					height="0.1"
+					depth="0.5"
+					material="color: #bfbfbf
+;
+ opacity: 0.5; transparent: true;"
+				></a-box>
+				<a-box
+					position="0 1 0.25"
+					rotation="15 0 0"
+					width="7"
+					height="0.1"
+					depth="0.5"
+					material="color: #bfbfbf
+;
+ opacity: 0.5; transparent: true;"
+				></a-box>
+				<a-box
+					position="0 2 0.25"
+					rotation="15 0 0"
+					width="7"
+					height="0.1"
+					depth="0.5"
+					material="color: #bfbfbf
+;
+ opacity: 0.5; transparent: true;"
+				></a-box>
+			</a-box>
+
+			<a-entity camera></a-entity>
+		</a-scene>
 		<script>
 			if ('serviceWorker' in navigator) {
 				navigator.serviceWorker.register('service-worker.js')
