@@ -25,7 +25,13 @@
 
 			<!-- Person -->
 
-			<a-entity gltf-model="url(/assets/models/person.glb)" position="5 -1.5 -3.25" rotation="0 -45 0" scale="60 60 60"></a-entity>
+			<a-entity gltf-model="url(/assets/models/person.glb)" position="5 -1.5 -3.25" rotation="0 -45 0" scale="60 60 60">
+				<a-sphere position=".02 .07 .015" id="slider-handle" radius="0.1" color="#00B8A9" class="draggable" scale=".025 .025 .025"></a-sphere>
+				<a-sphere position="-.01 .06 .015" id="slider-handle" radius="0.1" color="#FFCB77" class="draggable" scale=".025 .025 .025"></a-sphere>
+				<a-sphere position=".01 .05 .015" id="slider-handle" radius="0.1" color="#6A82FB" class="draggable" scale=".025 .025 .025"></a-sphere>
+				<a-sphere position="-.02 .04 .015" id="slider-handle" radius="0.1" color="#FF9F1C" class="draggable" scale=".025 .025 .025"></a-sphere>
+				<a-sphere position=".02 .03 .015" id="slider-handle" radius="0.1" color="#A7F3D0" class="draggable" scale=".025 .025 .025"></a-sphere>
+			</a-entity>
 
 			<!-- Person Stand -->
 
@@ -38,7 +44,7 @@
 				width="3.5"
 				height="0.1"
 				depth="3.5"
-				material="color: #bfbfbf;
+				material="color: #ffffff;
 						 opacity: 1; 
 						 transparent: false;"
 			></a-box>
@@ -59,7 +65,7 @@
 					width="3.5"
 					height="0.1"
 					depth="3.5"
-					material="color: #bfbfbf;
+					material="color: #ffffff;
 							opacity: 1; 
 							transparent: false;"
 				></a-box>
@@ -73,6 +79,7 @@
 						 		opacity: 1; 
 						 		transparent: false;"
 					></a-box>
+					<a-text value="001" rotation="-90 0 90" position="-0.75 0 0" color="#FF5733" scale="4 4 4" align="center"></a-text>
 				</a-sphere>
 			</a-box>
 
@@ -84,7 +91,7 @@
 				width="4"
 				height="6"
 				depth="0.1"
-				material="color: #bfbfbf;
+				material="color: #333333;
 			    		opacity: 0.5; 
 						transparent: true;"
 			>
@@ -1639,8 +1646,8 @@
 				width="7"
 				height="4"
 				depth="0.1"
-				material="color: #bfbfbf;
- 			   			opacity: 0.5; 
+				material="color: #333333;
+ 			   			opacity: 0.75; 
 						transparent: true;"
 			>
 				<a-box
@@ -1697,7 +1704,7 @@
 
 			<!-- Book Stand -->
 
-			<a-cylinder position="0 4 -8" radius="2.5" height="0.25" material="color: #bfbfbf; opacity: 1; transparent: false;" rotation="-90 0 0 ">
+			<a-cylinder position="0 4 -8" radius="2.5" height="0.25" material="color: #111111; opacity: .25; transparent: true;" rotation="-90 0 0 ">
 				<!-- Book -->
 
 				<a-box
@@ -1717,19 +1724,75 @@
 			</a-cylinder>
 			<!-- Timeline Track -->
 			<a-box
-				position="0 -2.5 .25"
+				position="0 -2.5 .5"
 				rotation="15 0 0 "
-				width="13"
-				height=".1"
-				depth="1"
-				material="color: #bfbfbf;
-						opacity: 1; 
-						transparent: false;"
-			></a-box>
+				width="13.5"
+				height=".01"
+				depth="0"
+				material="color: #999999;
+						opacity: 0; 
+						transparent: true;"
+			>
+				<a-sphere position="-7 .05 -.6" id="slider-handle" radius="0.1" color="#00B8A9" class="draggable">
+					<a-box
+						position="7 0 0"
+						width="13.5"
+						height="0.025"
+						depth="0.25"
+						material="color: #ffffff;
+								 opacity: .75; 
+								 transparent: true;"
+					></a-box>
+				</a-sphere>
+				<a-sphere position="-7 .05 -.3" id="slider-handle" radius="0.1" color="#FFCB77" class="draggable">
+					<a-box
+						position="7 0 0"
+						width="13.5"
+						height="0.025"
+						depth="0.25"
+						material="color: #ffffff;
+								 opacity: .75; 
+								 transparent: true;"
+					></a-box>
+				</a-sphere>
+				<a-sphere position="-7 .05 0" id="slider-handle" radius="0.1" color="#6A82FB" class="draggable">
+					<a-box
+						position="7 0 0"
+						width="13.5"
+						height="0.025"
+						depth="0.25"
+						material="color: #ffffff;
+								 opacity: .75; 
+								 transparent: true;"
+					></a-box>
+				</a-sphere>
+				<a-sphere position="-7 .05 .3" id="slider-handle" radius="0.1" color="#FF9F1C" class="draggable">
+					<a-box
+						position="7 0 0"
+						width="13.5"
+						height="0.025"
+						depth="0.25"
+						material="color: #ffffff;
+								 opacity: .75; 
+								 transparent: true;"
+					></a-box>
+				</a-sphere>
+				<a-sphere position="-7 .05 .6" id="slider-handle" radius="0.1" color="#A7F3D0" class="draggable">
+					<a-box
+						position="7 0 0"
+						width="13.5"
+						height="0.025"
+						depth="0.25"
+						material="color: #ffffff;
+								 opacity: .75; 
+								 transparent: true;"
+					></a-box>
+				</a-sphere>
+			</a-box>
 
 			<!-- Table -->
 
-			<a-box position="0 -3 -2.5" width="15" height="0.1" depth="6.5" material="color: #bfbfbf; opacity: 0.5; transparent: true;"></a-box>
+			<a-box position="0 -3.25 -2.5" width="15" height="0.1" depth="6.5" material="color: #999999; opacity: 0.75; transparent: true;"></a-box>
 
 			<a-entity camera></a-entity>
 		</a-scene>
